@@ -6,5 +6,6 @@ class CreateCompanies < ActiveRecord::Migration
 
       t.timestamps
     end
+    Company.create!(name: "Adoptame.MX", url: "http://adoptame.mx")
   end
 end

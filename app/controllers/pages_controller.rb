@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   before_action :authenticate!, only: [:dashboard]
   def home
+    load_home
   end
 
   def dashboard

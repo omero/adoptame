@@ -1,5 +1,5 @@
 class DeviseCreateAdmins < ActiveRecord::Migration
-  def change
+  def self.up
     create_table(:admins) do |t|
       ## Database authenticatable
       t.string :name
@@ -40,6 +40,12 @@ class DeviseCreateAdmins < ActiveRecord::Migration
     # add_index :admins, :confirmation_token,   unique: true
     # add_index :admins, :unlock_token,         unique: true
 
-    first_admin = Admin.create!(name: "Administrator", email: "admin@admin.com", password: "admin", password_confirmation: "admin")
+    Admin.create!(name: "Administrator", email: "admin@admin.com", password: "admin", password_confirmation: "admin")
+  end
+
+  def self.down
+    remove_index :admins, :email
+    remove_index :admins, :reset_password_token
+    drop_table :admins
   end
 end

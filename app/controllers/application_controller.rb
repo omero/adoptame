@@ -21,12 +21,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def load_home
+    case 
+    when (admin_signed_in? or user_signed_in?)
+      redirect_to dashboard_path
+    end
+  end
+
 	protected
   def set_layout
   	case
-  	when admin_signed_in?
-  		"admin"
-  	when user_signed_in?
+  	when (admin_signed_in? or user_signed_in?)
   		"admin"
   	else
   		"application"

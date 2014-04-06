@@ -5,10 +5,7 @@
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Url</th>
-        <th></th>
-        <th></th>
+        <th>Asociación</th>
         <th></th>
       </tr>
     </thead>
@@ -16,11 +13,8 @@
     <tbody>
       <% @companies.each do |company| %>
       <tr>
-        <td><%= company.name %></td>
-        <td><%= company.url %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to company.name, company %></td>
+        <td><%= link_to 'Editar', edit_company_path(company) %></td>
       </tr>
       <% end %>
     </tbody>
@@ -28,5 +22,5 @@
 
   <br>
 
-  <%= link_to 'New Company', new_company_path %>
+  <%= link_to 'Nueva Asociación', new_company_path %>
 </div>
