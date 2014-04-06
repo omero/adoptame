@@ -1,7 +1,8 @@
 Adoptame::Application.routes.draw do
+  devise_for :users
   devise_for :admins
   resources :users
   resources :companies
-  get "pages/home"
+  get "/dashboard", to: "pages#dashboard"
   root 'pages#home'
 end

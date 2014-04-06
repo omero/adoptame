@@ -1,4 +1,7 @@
 en:
+  global:
+    alerts:
+      not_access: "No tienes acceso a esta sección"
   home:
     report_a_pet: "Report or publish a pet"
   companies:

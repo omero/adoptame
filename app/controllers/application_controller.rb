@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
   	end
 	end
 
+  def authenticate!
+    unless user_signed_in? or admin_signed_in?
+      redirect_to :root, alert: t("global.alerts.not_access")
+    end
+  end
+
 	protected
   def set_layout
   	case
