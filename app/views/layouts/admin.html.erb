@@ -25,12 +25,12 @@
         <a class="logo" href="#"><%= image_tag(asset_path('logo1.png')) %></a>
         <p class="slogan">adoptame.mx</p>
         <hr>
-        <p><%= link_to t("home.report_a_pet"), "#" %> &rarr;</p>
+        <p>&larr; <%= link_to "Cerrar Sesión", close_session_path, :method => :delete %></p>
       </div>
       <a class="elemadded responsive-link" href="#">Menu</a>
       <div class="menu-box">
         <ul class="menu">
-          <li><a class="active" href="#">Inicio</a></li>
+          <li><%= link_to "Asociaciones", companies_path, :class => "active" %></li>
           <li><a href="#">Adopta Ahora</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>

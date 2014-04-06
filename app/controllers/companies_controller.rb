@@ -1,5 +1,8 @@
 class CompaniesController < ApplicationController
+  before_action :authenticate_admin!, except: [:show]
   before_action :set_company, only: [:show, :edit, :update, :destroy]
+
+  layout :set_layout
 
   # GET /companies
   # GET /companies.json
