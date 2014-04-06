@@ -1,18 +1,20 @@
-<h1><%= t('companies.index.title') %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="services-section">
+  <h1><%= t('companies.index.title') %></h1>
 
-  <tbody>
-    <% @companies.each do |company| %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Url</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @companies.each do |company| %>
       <tr>
         <td><%= company.name %></td>
         <td><%= company.url %></td>
@@ -20,10 +22,11 @@
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New Company', new_company_path %>
+  <%= link_to 'New Company', new_company_path %>
+</div>

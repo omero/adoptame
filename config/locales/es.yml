@@ -1,10 +1,17 @@
 es:
   global:
+    authentication:
+      close_session: "Cerrar Sesión"
     alerts:
       not_access: "No tienes acceso a esta sección"
+  dashboard:
+    title: "Dashboard"
+    companies:
+      title: "Asociaciones"
+      description: "Lista de Asociaciones registradas en adoptame.mx"
   home:
     report_a_pet: "Reportar o publicar una mascota"
   companies:
-    name: "Companías"
+    name: "Asociaciones"
     index:
-      title: "Listado de compañías"
+      title: "Listado de Asociaciones"
