@@ -2,6 +2,6 @@ en:
   home:
     report_a_pet: "Report or publish a pet"
   companies:
-  	name: "Companies"
+    name: "Companies"
     index:
       title: "List of companies"
